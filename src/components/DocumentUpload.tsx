@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import { Button, Container, Row, Col } from 'reactstrap';
 import { postDocuments, getDocuments } from '../apiCalls/apiCalls';
 
 const DocumentUpload = () => {
@@ -26,11 +26,15 @@ const DocumentUpload = () => {
   };
 
   return (
-    <div>
-      <h2>Upload a Document</h2>
-      <input multiple type="file" onChange={handleFileChange} />
-      <button onClick={uploadDocument}>Upload</button>
-    </div>
+    <Container style={{ display: 'flex', justifyContent: 'center' }}>
+      <Row>
+        <Col md="12">
+          <h2>Upload a Document</h2>
+          <input multiple type="file" onChange={handleFileChange} />
+          <Button outline color="primary" onClick={uploadDocument}>Upload</Button>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

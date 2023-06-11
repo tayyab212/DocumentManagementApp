@@ -1,12 +1,15 @@
+import React from "react";
 import DocumentList from './components/DocumentList';
 import DocumentUpload from './components/DocumentUpload';
 
 function App() {
   return (
-    <div>
-     <DocumentList />
+    <>
       <DocumentUpload />
-    </div>
+      <br />
+      <DocumentList />
+
+    </>
   );
 }
 
