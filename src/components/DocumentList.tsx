@@ -107,7 +107,10 @@ const DocumentList = () => {
     <div>
       <h1>Document List</h1>
       <ul>
-        <span>{JSON.stringify(documents)}</span>
+        <button onClick={() => downloadSelectedDocuments(selectedDocuments)}>
+          Download Selected Documents
+        </button>
+
         {documents.map((document) => (
           <li key={document.documentId}>
             <input
@@ -123,9 +126,6 @@ const DocumentList = () => {
             <p>Upload Date: {new Date(document.uploadDateTime).toLocaleDateString()}</p>
             <p>Download Count: {document.downloadCount}</p>
             <button onClick={() => downloadDocument(document.documentId)}>Download</button>
-            <button onClick={() => downloadSelectedDocuments(selectedDocuments)}>
-              Download Selected Documents
-            </button>
 
             <button onClick={() => generateHandler(document.documentId)}>Generate Shareable Link</button>
             {shareableLink && (
@@ -135,7 +135,7 @@ const DocumentList = () => {
             )}
 
 
-            <PublicDocumentViewer token="a6deb854-e640-478b-b8e9-eea76b5fb2e1" />
+            {/* <PublicDocumentViewer token="a6deb854-e640-478b-b8e9-eea76b5fb2e1" /> */}
           </li>
         ))}
       </ul>
