@@ -149,7 +149,7 @@ const DocumentList = () => {
               <td>{document.name}</td>
               <td>{document.type}</td>
               <td>{document.downloadCount}</td>
-              <td>{new Date(document.uploadDateTime).toLocaleDateString()}</td>
+              <td>{new Date(document.uploadDateTime).toLocaleString()}</td>
               <td><img src={`data:image/png;base64,${document.contentPreviewImage}`} alt="Preview" /></td>
               <td> <Button outline color="success" onClick={() => generateShareAbleLinkHandler(document.documentId)}>Generate Shareable Link</Button></td>
               <td><Button outline color="primary" onClick={() => downloadDocument(document.documentId)}>Download</Button></td>
