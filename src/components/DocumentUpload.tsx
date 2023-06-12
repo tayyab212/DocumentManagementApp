@@ -18,8 +18,8 @@ const DocumentUpload = () => {
       });
 
       await postDocuments(formData);
-      await getDocuments();
       alert('Document uploaded successfully!');
+      window.location.reload();
     } catch (error) {
       console.error(error);
     }

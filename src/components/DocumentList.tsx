@@ -157,33 +157,6 @@ const DocumentList = () => {
           ))}
         </tbody>
       </Table>
-
-      {/* <ul>
-        {documents.map((document) => (
-          <li key={document.documentId}>
-            <input
-              type="checkbox"
-              value={document.documentId}
-              onChange={handleCheckboxChange}
-              checked={selectedDocuments.includes(document.documentId)}
-            />
-            <h3>{document.name}</h3>
-            <p>Type: {document.type}</p>
-            <img src={`${rootPath}${document.icon}`} alt="Document Icon" />
-            <img src={`data:image/png;base64,${document.contentPreviewImage}`} alt="Preview" />
-            <p>Upload Date: {new Date(document.uploadDateTime).toLocaleDateString()}</p>
-            <p>Download Count: {document.downloadCount}</p>
-            <button onClick={() => downloadDocument(document.documentId)}>Download</button>
-
-            <button onClick={() => generateShareAbleLinkHandler(document.documentId)}>Generate Shareable Link</button>
-            {shareableLink && (
-              <div>
-                Shareable Link: <a href={shareableLink}>{shareableLink}</a>
-              </div>
-            )}
-          </li>
-        ))}
-      </ul> */}
     </>
   )
 };
